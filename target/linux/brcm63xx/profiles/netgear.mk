@@ -36,8 +36,19 @@ define Profile/DGND3700v1_3800B
   NAME:=Netgear DGND3700 v1 / DGND3800B
   PACKAGES:=kmod-b43 wpad-mini \
 	kmod-usb2 kmod-usb-ohci kmod-ledtrig-usbdev
+
 endef
 define Profile/DGND3700v1_3800B/Description
   Package set optimized for DGND3700 v1 / DGND3800B.
 endef
 $(eval $(call Profile,DGND3700v1_3800B))
+
+define Profile/EVG2000
+  NAME:=Netgear EVG2000
+  PACKAGES:=kmod-b43 wpad-mini \
+	kmod-usb2 kmod-usb-ohci kmod-ledtrig-usbdev
+endef
+define Profile/EVG2000/Description
+  Package set optimized for EVG2000.
+endef
+$(eval $(call Profile,EVG2000))
