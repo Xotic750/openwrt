@@ -41,6 +41,15 @@ Subject: [PATCH 40/53] MIPS: BCM63XX: add a new cpu variant helper
  	bcm63xx_cpu_rev = (tmp & REV_REVID_MASK) >> REV_REVID_SHIFT;
  
  	switch (bcm63xx_cpu_id) {
+@@ -377,7 +387,7 @@ void __init bcm63xx_cpu_init(void)
+ 	bcm63xx_memory_size = detect_memory_size();
+ 
+ 	pr_info("Detected Broadcom 0x%04x CPU revision %02x\n",
+-		bcm63xx_cpu_id, bcm63xx_cpu_rev);
++		bcm63xx_cpu_variant, bcm63xx_cpu_rev);
+ 	pr_info("CPU frequency is %u MHz\n",
+ 		bcm63xx_cpu_freq / 1000000);
+ 	pr_info("%uMB of RAM installed\n",
 --- a/arch/mips/include/asm/mach-bcm63xx/bcm63xx_cpu.h
 +++ b/arch/mips/include/asm/mach-bcm63xx/bcm63xx_cpu.h
 @@ -19,6 +19,7 @@
