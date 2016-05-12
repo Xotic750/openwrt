@@ -33,7 +33,7 @@ Signed-off-by: Ralf Baechle <ralf@linux-mips.org>
 
 --- a/arch/mips/Kconfig
 +++ b/arch/mips/Kconfig
-@@ -2703,6 +2703,33 @@ config BOOT_RAW
+@@ -2704,6 +2704,33 @@ config BOOT_RAW
  
  
  
