@@ -46,7 +46,11 @@ $(eval $(call Profile,DGND3700v1_3800B))
 define Profile/EVG2000
   NAME:=Netgear EVG2000
   PACKAGES:=kmod-b43 wpad-mini \
-	kmod-usb2 kmod-usb-ohci kmod-ledtrig-usbdev
+	kmod-usb2 kmod-usb-ohci kmod-ledtrig-usbdev \
+  kmod-usb-storage kmod-scsi-core kmod-fs-ext4 \
+  luci luci-app-samba luci-app-minidlna luci-app-hd-idle \
+	nfs-kernel-server pciutils usbutils block-mount fdisk \
+	e2fsprogs screen libffmpeg-mini
 endef
 define Profile/EVG2000/Description
   Package set optimized for EVG2000.
